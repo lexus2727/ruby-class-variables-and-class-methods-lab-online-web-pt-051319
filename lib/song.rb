@@ -19,10 +19,12 @@ class Song
   
   def self.genres
     #control for duplicates code here
+    @@genres.uniq
   end
   
   def self.artists
     #control for duplicates code here
+    @@artist.uniq
   end
   
   def self.genre_count
