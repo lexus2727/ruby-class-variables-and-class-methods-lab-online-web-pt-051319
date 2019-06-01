@@ -9,8 +9,10 @@ class Song
     @artist = artist
     @genre = genre
     @@count += 1
-    #add genres to array
-    #add artists to array
+    #add genres to array when initialized
+    @@genres << genre
+    #add artists to array when initialized
+    @@artist << artist
   end
   
   def self.count
