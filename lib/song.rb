@@ -12,7 +12,7 @@ class Song
     #add genres to array when initialized
     @@genres << genre
     #add artists to array when initialized
-    @@artist << artist
+    @@artists << artist
   end
   
   def self.count
@@ -33,9 +33,11 @@ class Song
     #should return a hash in which keys are the names of each genre.
     #Each genre name key should point to a value that is the number of 
     #songs that have that genre.
+    @@genres.inject(Hash.new(0)) { |total, i| total[i] += 1; total}
   end
     
     def self.artist_count
+      @@artists.inject(Hash.new(0)) {|total, i| total[i] += 1; total}
     end
   
   
