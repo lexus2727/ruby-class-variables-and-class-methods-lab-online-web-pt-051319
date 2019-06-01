@@ -24,7 +24,7 @@ class Song
   
   def self.artists
     #control for duplicates code here
-    @@artist.uniq
+    @@artists.uniq
   end
   
   def self.genre_count
